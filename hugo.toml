@@ -1,7 +1,7 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'volunteers_theme'
+languageCode = 'ru'
+title = 'О стране и мире: Российские реалии 2023'
+theme = 'conference2023_theme'
 relativeURLS = true
 
 [module]
