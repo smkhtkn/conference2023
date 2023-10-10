@@ -2,6 +2,7 @@ baseURL = 'https://example.org/'
 languageCode = 'ru'
 title = 'О стране и мире: Российские реалии 2023'
 theme = 'conference2023_theme'
+publishDir = 'docs'
 relativeURLS = true
 
 [module]
