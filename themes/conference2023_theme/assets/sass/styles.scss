@@ -27,14 +27,8 @@
 }
 
 body {
-    font-family: 'Evolventa', sans-serif !important;
+    font-family: 'Evolventa', sans-serif;
   }
-
-.display-7 {
-    font-size: 2.1rem !important;
-    font-weight: 300 !important;
-    line-height: 1.2 !important;
-}
 
 .bg-special {
     background-color: var(--color-bg-blur, rgba(255, 255, 255, .6));
@@ -46,5 +40,10 @@ body {
 
 .conference-image {
     background: url('../russia.svg') center no-repeat;
-    background-size: 88%;
+    background-size: 100%;
+}
+
+.img-person-size {
+	width: 200px;
+	height: 200px;
 }

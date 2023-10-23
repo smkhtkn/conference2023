@@ -4,50 +4,64 @@
 
     <div class="row mx-5 px-5">
 
-        <div class="my-5 py-5">
+        <div class="py-4 my-4">
             <div class="conference-image">
                 <div class="my-5 py-5">
-                    <div class="fs-3 d-inline">Конференция организована медиа-проектом
-                        <a class="ms-2" href="https://t.me/stranaimir" target="_blank">
-                            <img src="stmlogo.svg" height="40" alt="О стране и мире" loading="lazy" style="margin-top: -5px;"/>
-                        </a>
+                    <div class="my-5 py-5">
+                        <div class="fs-3 d-inline">Конференция организована медиа-проектом
+                            <a class="ms-2" href="https://t.me/stranaimir" target="_blank">
+                                <img src="stmlogo.svg" height="40" alt="О стране и мире" loading="lazy" style="margin-top: -5px;"/>
+                            </a>
+                        </div>
+                        <h1 class="display-2 fw-bold text-uppercase my-5">Страна и мир: российские реалии 2023</h1>
+                        <h2 class="display-6 my-5"><mark class="text-white bg-danger">Берлин, 23-24 ноября</mark></h2> 
                     </div>
-                    <h1 class="display-2 fw-bold text-uppercase my-5">Российские реалии 2023: государство, гражданское общество</h1>
-                    <h2 class="display-6 mb-4"><mark class="text-white bg-danger">Берлин, 23-24 ноября</mark></h3>
                 </div>
             </div>
         </div>
 
-    <div class="my-5">
-        <h2 class="display-4 fst-italic fw-bold text-uppercase">День первый</h2>
+    <div class="my-5 pb-5">
+        <h2 class="display-4 fw-bold text-uppercase">День первый</h2>
     </div>
     
     <div class="mb-5">
         <h3 class="display-6 mb-4"><mark class="text-white bg-danger">Сессия 1</mark></h3>
         <h3 class="display-5">Эволюция политического режима во время войны</h3>
         <h4 class="display-6 fst-italic mb-4">10.00-12.00</h4>
-        <p class="lead">Политические итоги 2023 года. Путин готовится к долгой войне — выдержит ли ее российская политическая система? Стал ли Путин «хромой уткой»? Начинают ли влиятельные силовики готовится разным сценариям политики «после Путина»? Пригожинский мятеж, региональные силовые компании — вступаем ли мы в период нового «передела пирога»?</p>
+        <p class="lead mb-5">Политические итоги 2023 года. Путин готовится к долгой войне — выдержит ли ее российская политическая система? Стал ли Путин «хромой уткой»? Начинают ли влиятельные силовики готовится разным сценариям политики «после Путина»? Пригожинский мятеж, региональные силовые компании — вступаем ли мы в период нового «передела пирога»?</p>
+
+        {{ partial "session1.html" . }}
+
     </div>
 
-    <div class="mb-5">
+    <div class="my-5">
         <h3 class="display-6 mb-4"><mark class="text-white bg-danger">Сессия 2</mark></h3>
         <h3 class="display-5">Репрессии и права человека</h3>
         <h4 class="display-6 fst-italic mb-4">12.30-13.30</h4>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="lead mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        {{ partial "session2.html" . }}
+
     </div>
     
-    <div class="mb-5">
+    <div class="my-5">
         <h3 class="display-6 mb-4"><mark class="text-white bg-danger">Сессия 3</mark></h3>
         <h3 class="display-5">Антивоенная Россия в эмиграции</h3>
         <h4 class="display-6 fst-italic mb-4">14.30-16.00</h4>
-        <p class="lead">За 2022-2023 годы из России уехало порядка 800 тыс человек. Это противники войны и люди, в основном придерживающихся демократической ориентации. Удается ли оказавшихся в различных странах мира людям ресоциализироваться? Вовлечены ли они в политику своих стран и России? Может ли и будет ли эмиграция оказывать существенное влияние на события в России?</p>
+        <p class="lead mb-5">За 2022-2023 годы из России уехало порядка 800 тыс человек. Это противники войны и люди, в основном придерживающихся демократической ориентации. Удается ли оказавшихся в различных странах мира людям ресоциализироваться? Вовлечены ли они в политику своих стран и России? Может ли и будет ли эмиграция оказывать существенное влияние на события в России?</p>
+
+        {{ partial "session3.html" . }}
+
     </div>
     
-    <div class="mb-5">
+    <div class="my-5">
         <h3 class="display-6 mb-4"><mark class="text-white bg-danger">Сессия 4</mark></h3>
         <h3 class="display-5">Идеология путинского режима после начала вторжения в Украину</h3>
         <h4 class="display-6 fst-italic mb-4">16.30-18.00</h4>
-        <p class="lead">Играет ли идеология существенную роль в путинском оправдании войны с Украиной, или ее роль незначительна, и власть интересует лишь «официальный патриотизм»? Какова природа идеологии, формируемой Путиным: это империализм? Фашизм? Почему исторический реваншизм получил такую власть над российскими элитами?</p>
+        <p class="lead mb-5">Играет ли идеология существенную роль в путинском оправдании войны с Украиной, или ее роль незначительна, и власть интересует лишь «официальный патриотизм»? Какова природа идеологии, формируемой Путиным: это империализм? Фашизм? Почему исторический реваншизм получил такую власть над российскими элитами?</p>
+
+        {{ partial "session4.html" . }}
+
     </div>
 
     </div>
