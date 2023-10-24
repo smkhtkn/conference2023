@@ -26,9 +26,45 @@
 	font-style: italic;
 }
 
+@font-face {
+	font-family:'pt serif';
+	font-style:normal;
+	font-weight:400;
+	src:local('PT Serif'), url('fonts/PT_Serif-Web-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family:'pt serif';
+	font-style:italic;
+	font-weight:400;
+	src:local('PT Serif'), url('fonts/PT_Serif-Web-Italic.woff') format('woff');
+}
+
+@font-face {
+	font-family:'pt serif';
+	font-style:normal;
+	font-weight:700;
+	src:local('PT Serif'), url('fonts/PT_Serif-Web-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family:'pt serif';
+	font-style:italic;
+	font-weight:700;
+	src:local('PT Serif'),url('fonts/PT_Serif-Web-BoldItalic.woff') format('woff');
+}
+
+html {
+	scroll-padding-top: 5rem;
+}
+
 body {
     font-family: 'Evolventa', sans-serif;
   }
+
+.ptserif {
+	font-family: 'pt serif', serif;
+}
 
 .bg-special {
     background-color: var(--color-bg-blur, rgba(255, 255, 255, .6));
@@ -52,3 +88,67 @@ body {
 	width: 200px;
 	height: 200px;
 }
+
+.atypique {
+	box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1) !important;
+	border: none !important;
+}
+
+.shadow-at {
+	box-shadow: 4rem 2rem 124px rgba(0,0,0,.08);
+}
+
+input[type="email"]:focus {
+	outline: $danger solid 2px;
+	border-radius: 0;
+}
+
+input[type="text"]:focus {
+	outline: $danger solid 2px;
+	border-radius: 0;
+}
+
+@media (min-width: 992px) {
+	.bd-toc {
+	  position:-webkit-sticky;
+	  position:sticky;
+	  top:10rem;
+	  right:0;
+	  z-index:2;
+	  height:calc(100vh - 7rem);
+	  overflow-y:auto
+	}
+  }
+  .bd-toc nav {
+	font-size:.875rem;
+  }
+  .bd-toc nav ul {
+	padding-left:0;
+	margin-bottom:0;
+	list-style:none
+  }
+  .bd-toc nav ul ul {
+	padding-left:1rem
+  }
+  .bd-toc nav a {
+	display:block;
+	padding:.125rem 0 .125rem .75rem;
+	color:inherit;
+	text-decoration:none;
+	border-left:.125rem solid transparent
+  }
+  .bd-toc nav a:hover,
+  .bd-toc nav a.active {
+	color:$danger;
+	border-left-color:$danger;
+  }
+  .bd-toc nav a.active {
+	font-weight:500
+  }
+  .bd-toc nav a code {
+	font:inherit
+  }
+  .bd-toc-toggle {
+	display:flex;
+	align-items:center
+  }

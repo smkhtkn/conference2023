@@ -1,27 +1,27 @@
-<div class="p-5 bg-white rounded-0">
+<div class="p-5 bg-white rounded-0 border border-3 border-danger shadow-at">
     <h2 class="display-4 display-5 fw-bold text-center mb-5">Регистрация</h2>
     
-    <form class="mx-5 px-5">
+    <form class="mx-5">
         <div class="d-lg-flex mb-3">
         <div class="col-12 col-lg-6 pe-lg-3">
-            <label for="name" class="form-label display-8">Ваши имя и фамилия</label>
-            <input type="text" class="form-control-lg w-100 rounded-0" id="name" aria-describedby="nameHelp">
+            <label for="name" class="form-label display-9">Как к вам обращаться?</label>
+            <input type="text" class="form-control-lg w-100 rounded-0 atypique" id="name" aria-describedby="nameHelp" placeholder="Марина Семенова">
             <div id="nameHelp" class="form-text">При желании, вы можете указать только имя</div>
         </div>
         <div class="col-12 col-lg-6">
-            <label for="mail" class="form-label display-8">Ваша электронная почта</label>
-            <input type="email" class="form-control-lg w-100 rounded-0" id="mail" aria-describedby="mailHelp">
-            <div id="mailHelp" class="form-text">Она нам нужна, чтобы отправить вам ссылку</div>
+            <label for="mail" class="form-label display-9">Ваша электронная почта</label>
+            <input type="email" class="form-control-lg w-100 rounded-0 atypique" id="mail" aria-describedby="mailHelp" placeholder="name@example.com">
+            <div id="mailHelp" class="form-text">Она нужна нам, чтобы отправить вам ссылку</div>
         </div>
     </div>
         <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="subscription">
+            <input type="checkbox" class="form-check-input" id="subscription" checked>
             <label class="form-check-label" for="subscription">Хочу получать рассылку медиа-проекта «О стране и мире» с анонсами новых мероприятий</label>
         </div>
 
-        <div class="mb-3 py-3">
+        <div class="mb-3 py-4">
 
-            <label for="checkSession1" class="form-label display-8">Выбор сессии</label>
+            <label for="checkSession1" class="form-label display-9">Выбор сессии</label>
 
             <div class="d-lg-flex">
             <div class="col-12 col-lg-6 pe-lg-3">
@@ -57,7 +57,7 @@
                 <label class="form-check-label" for="checkSession7">Сессия 7: Что мы знаем о настроениях россиян?</label>
             </div>
             <div class="form-check form-switch mb-2">
-                <input class="form-check-input" type="checkbox" role="switch" id="checkSession8" checked>
+                <input class="form-check-input" type="checkbox" role="switch" id="checkSession8">
                 <label class="form-check-label" for="checkSession8">Сессия 8: Экономика военного времени</label>
             </div>
             <div class="form-check form-switch mb-2">
@@ -69,7 +69,7 @@
 
         </div>
 
-        <div class="text-center"><button type="submit" class="btn btn-danger rounded-0"><span class="display-8">Отправить</span></button></div>
+        <div class="text-center"><button type="submit" class="btn btn-danger btn-lg rounded-0">Отправить</button></div>
         
     </form>
 </div>
