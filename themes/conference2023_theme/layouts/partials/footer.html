@@ -1,4 +1,4 @@
-<footer class="footer fixed-bottom bg-dark d-none">
+<footer class="footer fixed-bottom bg-dark">
 
     <div class="row footer-text">
       <div class="col-12 col-md text-center text-md-left nav-link text-white">Российские реалии - проект, 2023</div>
@@ -11,8 +11,30 @@
 
   <script src="{{$js.RelPermalink}}" defer></script>
 
-  <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
-  
-  <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+  {{- with resources.Get "js/jquery-3.7.1.min.js" }}
+  {{- if eq hugo.Environment "development" }}
+    {{- with . | js.Build }}
+      <script src="{{ .RelPermalink }}"></script>
+    {{- end }}
+  {{- else }}
+    {{- $opts := dict "minify" true }}
+    {{- with . | js.Build $opts | fingerprint }}
+      <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+  {{- with resources.Get "js/bootstrap-toc.js" }}
+  {{- if eq hugo.Environment "development" }}
+    {{- with . | js.Build }}
+      <script src="{{ .RelPermalink }}"></script>
+    {{- end }}
+  {{- else }}
+    {{- $opts := dict "minify" true }}
+    {{- with . | js.Build $opts | fingerprint }}
+      <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
+    {{- end }}
+  {{- end }}
+{{- end }}
 
 </footer>
