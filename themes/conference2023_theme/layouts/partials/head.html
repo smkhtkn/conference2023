@@ -11,14 +11,4 @@
 {{ $style := resources.Get "sass/main.scss" | toCSS  $options | minify }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
 
-{{- with resources.Get "css/bootstrap-toc.css" }}
-  {{- if eq hugo.Environment "development" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{- else }}
-    {{- with . | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{- end }}
-  {{- end }}
-{{- end }}
-
 <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
