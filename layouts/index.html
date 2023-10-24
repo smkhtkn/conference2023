@@ -2,8 +2,13 @@
 
 <div class="container">
 
-    <div class="row mx-5 px-5">
+    <div class="row mx-2 mx-md-5 px-md-5">
 
+        <!-- <div class="col-3">
+            {{ partial "menu.html" . }}
+        </div> -->
+
+        <!-- <div class="col-9"> -->
             <div class="conference-image">
                 <div class="my-5 py-5">
                     <div class="my-5 py-5">
@@ -29,13 +34,13 @@
             <p>Мероприятие пройдёт на двух языках — русском и английском — с синхронным переводом.</p>
         </div>
 
-    <div class="mt-5 mb-3 pb-5">
+    <div id="DayOne" class="mt-5 mb-3 pb-5">
         <h2 class="display-4 fw-bold text-uppercase">День первый</h2>
     </div>
     
-    <div class="mb-5">
+    <div id="Session1" class="mb-5">
         <h3 class="display-6 mb-4"><mark class="text-white bg-danger">Сессия 1</mark></h3>
-        <h3 class="display-5">Эволюция политического режима во время войны</h3>
+        <h3 class="display-5 fw-bold">Эволюция политического режима во время войны</h3>
         <h4 class="display-6 fst-italic mb-4">10.00-12.00</h4>
         <p class="lead mb-5">Политические итоги 2023 года. Путин готовится к долгой войне — выдержит ли ее российская политическая система? Стал ли Путин «хромой уткой»? Начинают ли влиятельные силовики готовится разным сценариям политики «после Путина»? Пригожинский мятеж, региональные силовые компании — вступаем ли мы в период нового «передела пирога»?</p>
 
@@ -43,9 +48,9 @@
 
     </div>
 
-    <div class="my-5">
+    <div id="Session2" class="my-5">
         <h3 class="display-6 mb-4"><mark class="text-white bg-danger">Сессия 2</mark></h3>
-        <h3 class="display-5">Репрессии и права человека</h3>
+        <h3 class="display-5 fw-bold">Репрессии и права человека</h3>
         <h4 class="display-6 fst-italic mb-4">12.30-13.30</h4>
         <p class="lead mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
@@ -53,9 +58,9 @@
 
     </div>
     
-    <div class="my-5">
+    <div id="Session3" class="my-5">
         <h3 class="display-6 mb-4"><mark class="text-white bg-danger">Сессия 3</mark></h3>
-        <h3 class="display-5">Антивоенная Россия в эмиграции</h3>
+        <h3 class="display-5 fw-bold">Антивоенная Россия в эмиграции</h3>
         <h4 class="display-6 fst-italic mb-4">14.30-16.00</h4>
         <p class="lead mb-5">За 2022-2023 годы из России уехало порядка 800 тыс человек. Это противники войны и люди, в основном придерживающихся демократической ориентации. Удается ли оказавшихся в различных странах мира людям ресоциализироваться? Вовлечены ли они в политику своих стран и России? Может ли и будет ли эмиграция оказывать существенное влияние на события в России?</p>
 
@@ -63,9 +68,9 @@
 
     </div>
     
-    <div class="my-5">
+    <div id="Session4" class="my-5">
         <h3 class="display-6 mb-4"><mark class="text-white bg-danger">Сессия 4</mark></h3>
-        <h3 class="display-5">Идеология путинского режима после начала вторжения в Украину</h3>
+        <h3 class="display-5 fw-bold">Идеология путинского режима после начала вторжения в Украину</h3>
         <h4 class="display-6 fst-italic mb-4">16.30-18.00</h4>
         <p class="lead mb-5">Играет ли идеология существенную роль в путинском оправдании войны с Украиной, или ее роль незначительна, и власть интересует лишь «официальный патриотизм»? Какова природа идеологии, формируемой Путиным: это империализм? Фашизм? Почему исторический реваншизм получил такую власть над российскими элитами?</p>
 
@@ -73,13 +78,13 @@
 
     </div>
 
-    <div class="mt-5 mb-3 pb-5">
+    <div id="DayTwo" class="mt-5 mb-3 pb-5">
         <h2 class="display-4 fw-bold text-uppercase">День второй</h2>
     </div>
 
-    <div class="mb-5">
+    <div id="Session5" class="mb-5">
         <h3 class="display-6 mb-4"><mark class="text-white bg-danger">Сессия 5</mark></h3>
-        <div class="d-flex flex-wrap align-items-center"><h3 class="display-5">Мировая политика</h3><div class="ms-3 badge fw-normal text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-0"><span class="display-8">Начало</span></div></div>
+        <div class="d-flex flex-wrap align-items-center"><h3 class="display-5 fw-bold">Мировая политика</h3><div class="ms-3 badge fw-normal text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-0"><span class="display-8">Начало</span></div></div>
         <h4 class="display-6 fst-italic mb-4">10.00-11.30</h4>
         <p class="lead mb-5">Коалиция западных стран быстро и решительно поддержала Украину в противостоянии российской агрессии. Но хватит ли у союзников решимости поддерживать противостояние, если эта война — надолго? И как будут дальше вести себя неприсоединившиеся или поддерживающие Россию страны?</p>
 
@@ -87,9 +92,9 @@
 
     </div>
 
-    <div class="my-5">
+    <div id="Session6" class="my-5">
         <h3 class="display-6 mb-4"><mark class="text-white bg-danger">Сессия 6</mark></h3>
-        <div class="d-flex flex-wrap align-items-center"><h3 class="display-5">Мировая политика</h3><div class="ms-3 badge fw-normal text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-0"><span class="display-8">Окончание</span></div></div>
+        <div class="d-flex flex-wrap align-items-center"><h3 class="display-5 fw-bold">Мировая политика</h3><div class="ms-3 badge fw-normal text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-0"><span class="display-8">Окончание</span></div></div>
         <h4 class="display-6 fst-italic mb-4">12.00-13.30</h4>
         <p class="lead mb-5">Коалиция западных стран быстро и решительно поддержала Украину в противостоянии российской агрессии. Но хватит ли у союзников решимости поддерживать противостояние, если эта война — надолго? И как будут дальше вести себя неприсоединившиеся или поддерживающие Россию страны?</p>
 
@@ -97,9 +102,9 @@
 
     </div>
     
-    <div class="my-5">
+    <div id="Session7" class="my-5">
         <h3 class="display-6 mb-4"><mark class="text-white bg-danger">Сессия 7</mark></h3>
-        <h3 class="display-5">Что мы знаем о настроениях россиян?</h3>
+        <h3 class="display-5 fw-bold">Что мы знаем о настроениях россиян?</h3>
         <h4 class="display-6 fst-italic mb-4">14.30-16.00</h4>
         <p class="lead mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
@@ -107,9 +112,9 @@
 
     </div>
     
-    <div class="my-5">
+    <div id="Session8" class="my-5">
         <h3 class="display-6 mb-4"><mark class="text-white bg-danger">Сессия 8</mark></h3>
-        <h3 class="display-5">Экономика военного времени</h3>
+        <h3 class="display-5 fw-bold">Экономика военного времени</h3>
         <h4 class="display-6 fst-italic mb-4">16.30-18.30</h4>
         <p class="lead mb-5">Несмотря на беспрецедентные санкции, Россия избежала резкого экономического спада. Удалось приноровиться и к ограничениям на импорт технологической продукции: часть технологий поставляется через третьи страны, а часть — из дружественных России стран. Но удастся ли России значительно нарастить производство вооружений и вести долгую войну?</p>
 
@@ -117,8 +122,18 @@
 
     </div>
 
+    <!-- </div> -->
+
     </div>
 
+</div>
+
+<div id="Registration" class="bckg-image">
+<div class="container">
+    <div class="row py-5 mx-2 mx-md-5 px-md-5">
+        {{ partial "registration.html" . }}
+    </div>
+</div>
 </div>
 
 {{ end }}

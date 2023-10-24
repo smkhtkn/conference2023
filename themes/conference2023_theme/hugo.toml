@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = 'ru'
+title = 'Страна и мир: российские реалии 2023'
 
 [[menus.main]]
 name = 'Home'
@@ -21,3 +21,9 @@ weight = 30
   [module.hugoVersion]
     extended = false
     min = "0.116.0"
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 5
+    ordered = false
