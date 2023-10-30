@@ -466,16 +466,16 @@
         <div class="p-5 bg-white rounded-0 border border-3 border-danger shadow-at">
     <h2 id="Registration" class="display-4 display-5 fw-bold text-center mb-5">Регистрация</h2>
     
-    <form method="POST" action="https://script.google.com/macros/s/AKfycbwiR4mdqijmHdlqoxR1Gde75Jz6siq25bca8fuqp7xbYnG5-wgGu2J6uDPCj6ei3_vo/exec" class="mx-5">
+    <form method="POST" action="https://script.google.com/macros/s/AKfycbwiR4mdqijmHdlqoxR1Gde75Jz6siq25bca8fuqp7xbYnG5-wgGu2J6uDPCj6ei3_vo/exec" class="mx-5" id="regform">
         <div class="d-lg-flex mb-3">
         <div class="col-12 col-lg-6 pe-lg-3">
             <label for="name" class="form-label display-9">Как к вам обращаться?</label>
-            <input name="Name" type="text" class="form-control-lg w-100 rounded-0 atypique" id="name" aria-describedby="nameHelp" placeholder="Марина Семенова">
+            <input name="Name" type="text" class="form-control-lg w-100 rounded-0 atypique" id="name" aria-describedby="nameHelp" placeholder="Марина Семенова" required>
             <div id="nameHelp" class="form-text">При желании, вы можете указать только имя</div>
         </div>
         <div class="col-12 col-lg-6">
             <label for="mail" class="form-label display-9">Ваша электронная почта</label>
-            <input name="Email" type="email" class="form-control-lg w-100 rounded-0 atypique" id="mail" aria-describedby="mailHelp" placeholder="name@example.com">
+            <input name="Email" type="email" class="form-control-lg w-100 rounded-0 atypique" id="mail" aria-describedby="mailHelp" placeholder="name@example.com" required>
             <div id="mailHelp" class="form-text">Она нужна нам, чтобы отправить вам ссылку</div>
         </div>
     </div>
@@ -537,6 +537,7 @@
         <div class="text-center"><button type="submit" class="btn btn-danger btn-lg rounded-0">Отправить</button></div>
         
     </form>
+    <div id="success-message" class="d-none display-8 text-center">Спасибо, вы успешно зарегистрировались! В день мероприятия мы пришлем вам ссылки на выбранные вами сессии. В случае, если письмо не придет, проверьте папку «Спам». При наличии дополнительных вопросов напишите нам сюда: <a href="mailto:info@sakharov.world">info@sakharov.world</a></div>
 </div>
     </div>
 </div>
@@ -546,14 +547,12 @@
   <footer class="footer bg-dark mt-5">
      <div class="container">
     <div class="row footer-text py-5">
-      <div class="col-6 col-md text-md-left nav-link text-white f-875">
+      <div class="col-6 col-md-9 pe-md-4 text-md-left nav-link text-white f-875">
         <span class="fw-bold">Photo Credit:</span> Carnegie Endowment for International Peace, <span class="fst-italic">2023;</span> Riddle, <span class="fst-italic">2023;</span> Freie Universität Berlin, <span class="fst-italic">2023;</span> Bank of Finland, <span class="fst-italic">2023;</span> «вДудь» / YouTube, <span class="fst-italic">2023;</span> Public Sociology Laboratory, Centre for Independent Social Research (Russia), <span class="fst-italic">2023;</span> Open University (Russia), <span class="fst-italic">2023;</span> RFE / Radio Liberty, Inc. <span class="fst-italic">2023;</span> Юрий Белят / RTVI, <span class="fst-italic">2023;</span> Stefan Roehl / Heinrich-Böll-Stiftung, <span class="fst-italic">2023;</span> Twitter, <span class="fst-italic">2023;</span> Finnish Institute of International Affairs, <span class="fst-italic">2023;</span> Lennart Meri Conference, <span class="fst-italic">2023;</span> Wilson Center, <span class="fst-italic">2023;</span> Центр громадянських свобод, <span class="fst-italic">2023;</span> Andrei Rushailo-Arno, <span class="fst-italic">2023</span></div>
-      <div class="col-6 col-md text-md-left nav-link text-white text-end">
+      <div class="col-6 col-md-3 text-md-left nav-link text-white text-end">
         <div>Директор программы: Сергей Лукашевский</div>
         <div>Куратор программы: Борис Грозовский</div>
-        <div>Организационная поддержка: Вера Рыклина</div>
-        <div>Рассылка: Дарья Басаман</div>
-        <div>Трансляция: Илья Фиглин</div>
+        <div>Организационная поддержка: Дарья Басаман, Вера Рыклина, Илья Фиглин</div>
         <div>Сайт: Андрей Самохоткин</div>
       </div>
     </div>
@@ -565,6 +564,28 @@
   
 
   <script src="./js/bundle.min.js" defer></script>
+
+  <script>
+    window.addEventListener("load", function() {
+      const form = document.getElementById('regform');
+      const successMessage = document.getElementById('success-message');
+  
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        const action = e.target.action;
+  
+        fetch(action, {
+          method: 'POST',
+          body: data,
+        })
+        .then(() => {
+          form.classList.add('d-none');
+          successMessage.classList.remove('d-none');
+        })
+      });
+    });
+  </script>
   </footer>
 </body>
 </html>
