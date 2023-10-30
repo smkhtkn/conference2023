@@ -1,16 +1,16 @@
 <div class="p-5 bg-white rounded-0 border border-3 border-danger shadow-at">
     <h2 id="Registration" class="display-4 display-5 fw-bold text-center mb-5">Регистрация</h2>
     
-    <form method="POST" action="https://script.google.com/macros/s/AKfycbwiR4mdqijmHdlqoxR1Gde75Jz6siq25bca8fuqp7xbYnG5-wgGu2J6uDPCj6ei3_vo/exec" class="mx-5">
+    <form method="POST" action="https://script.google.com/macros/s/AKfycbwiR4mdqijmHdlqoxR1Gde75Jz6siq25bca8fuqp7xbYnG5-wgGu2J6uDPCj6ei3_vo/exec" class="mx-5" id="regform">
         <div class="d-lg-flex mb-3">
         <div class="col-12 col-lg-6 pe-lg-3">
             <label for="name" class="form-label display-9">Как к вам обращаться?</label>
-            <input name="Name" type="text" class="form-control-lg w-100 rounded-0 atypique" id="name" aria-describedby="nameHelp" placeholder="Марина Семенова">
+            <input name="Name" type="text" class="form-control-lg w-100 rounded-0 atypique" id="name" aria-describedby="nameHelp" placeholder="Марина Семенова" required>
             <div id="nameHelp" class="form-text">При желании, вы можете указать только имя</div>
         </div>
         <div class="col-12 col-lg-6">
             <label for="mail" class="form-label display-9">Ваша электронная почта</label>
-            <input name="Email" type="email" class="form-control-lg w-100 rounded-0 atypique" id="mail" aria-describedby="mailHelp" placeholder="name@example.com">
+            <input name="Email" type="email" class="form-control-lg w-100 rounded-0 atypique" id="mail" aria-describedby="mailHelp" placeholder="name@example.com" required>
             <div id="mailHelp" class="form-text">Она нужна нам, чтобы отправить вам ссылку</div>
         </div>
     </div>
@@ -72,4 +72,5 @@
         <div class="text-center"><button type="submit" class="btn btn-danger btn-lg rounded-0">Отправить</button></div>
         
     </form>
+    <div id="success-message" class="d-none display-8 text-center">Спасибо, вы успешно зарегистрировались! В день мероприятия мы пришлем вам ссылки на выбранные вами сессии. В случае, если письмо не придет, проверьте папку «Спам». При наличии дополнительных вопросов напишите нам сюда: <a href="mailto:info@sakharov.world">info@sakharov.world</a></div>
 </div>
