@@ -4,17 +4,17 @@
 
     <div class="row mx-auto">
 
-        <div class="col-2">
+        <div class="col-lg-2">
             {{ partial "menu.html" . }}
         </div>
 
-        <div class="col-10 ps-5">
+        <div class="col-lg-10 ps-lg-5">
             <div class="conference-image">
                 <div class="my-5 py-5">
                     <div class="my-5 py-5">
                         <div class="fs-3 d-inline">Конференция организована медиа-проектом
                             <a class="ms-2" href="https://t.me/stranaimir" target="_blank">
-                                <img src="stmlogo.svg" height="40" alt="О стране и мире" style="margin-top: -5px;"/>
+                                <img class="stmologo" src="stmlogo.svg" alt="О стране и мире"/>
                             </a>
                         </div>
                         <h1 class="display-2 fw-bold text-uppercase my-5">Страна и мир: российские реалии 2023</h1>
@@ -129,7 +129,7 @@
 </div>
 
 <div class="container pb-5">
-    <div class="row py-5 w-75 mx-auto">
+    <div class="row py-5 registrationform mx-auto">
         {{ partial "registration.html" . }}
     </div>
 </div>

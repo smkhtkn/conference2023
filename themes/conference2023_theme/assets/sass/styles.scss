@@ -87,6 +87,18 @@ body {
 .img-person-size {
 	width: 200px;
 	height: 200px;
+	@include _1200 {
+		width: 150px;
+		height: 150px;
+	 }
+	@include _979 {
+		width: 200px;
+		height: 200px;
+	 }
+	@include _480 {
+		width: 150px;
+		height: 150px;
+	 }
 }
 
 .atypique {
@@ -155,4 +167,31 @@ input[type="text"]:focus {
 
 .f-875 {
 	font-size:.875rem;
+}
+
+.stmologo {
+	margin-top: -5px;
+	height: 40px;
+	@include _1200 {
+		height: 36px;
+	 }
+	@include _979 {
+		height: 32px;
+	 }
+	@include _600 {
+		height: 26px;
+	 }
+}
+
+.registrationform {
+	width: 75%;
+	@include _979 {
+		width: 80%;
+	 }
+	@include _768 {
+		width: 85%;
+	 }
+	@include _480 {
+		width: 100%;
+	 }
 }
