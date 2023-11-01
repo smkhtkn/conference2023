@@ -19,7 +19,7 @@
 </head>
 <body data-bs-spy="scroll" data-bs-target="#TableOfContents">
   <header>
-    <nav class="navbar navbar-expand-lg fixed-top bg-special">
+    <nav class="navbar navbar-expand-xl fixed-top bg-special">
   
   <div class="container-fluid mx-4">
     
@@ -33,16 +33,8 @@
     </a>
 
     
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarbutton"
-      aria-controls="navbarbutton"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
+    <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
 
     
@@ -62,11 +54,29 @@
 
     <div class="row mx-auto">
 
-        <div class="col-lg-2">
-            <div class="bd-toc my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
-  <strong class="d-none d-md-block h6 mb-2 ms-2">Содержание</strong>
-    <nav id="TableOfContents">
+        <div class="col-xl-2">
+            <div class="bd-toc my-lg-0 mb-lg-5 px-sm-1">
+  <nav id="TableOfContents">
+    <strong class="d-none d-xl-block h6 mb-2 ms-2 text-body-secondary">Содержание</strong>
+    <div class="d-none d-xl-block text-body-secondary">
       <ul>
+        <li><a href="#Session1" class="">Сессия 1: Эволюция политического режима во время войны</a></li>
+        <li><a href="#Session2" class="">Сессия 2: Репрессии и права человека</a></li>
+        <li><a href="#Session3" class="">Сессия 3: Антивоенная Россия в эмиграции</a></li>
+        <li><a href="#Session4" class="">Сессия 4: Идеология путинского режима после начала вторжения в Украину</a></li>
+        <li><a href="#Session5" class="">Сессия 5: Мировая политика (начало)</a></li>
+        <li><a href="#Session6" class="">Сессия 6: Мировая политика (окончание)</a></li>
+        <li><a href="#Session7" class="">Сессия 7: Что мы знаем о настроениях россиян?</a></li>
+        <li><a href="#Session8" class="">Сессия 8: Экономика военного времени</a></li>
+      </ul>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Меню</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body text-body-secondary">
+        <ul>
             <li><a href="#Session1" class="">Сессия 1: Эволюция политического режима во время войны</a></li>
             <li><a href="#Session2" class="">Сессия 2: Репрессии и права человека</a></li>
             <li><a href="#Session3" class="">Сессия 3: Антивоенная Россия в эмиграции</a></li>
@@ -75,17 +85,20 @@
             <li><a href="#Session6" class="">Сессия 6: Мировая политика (окончание)</a></li>
             <li><a href="#Session7" class="">Сессия 7: Что мы знаем о настроениях россиян?</a></li>
             <li><a href="#Session8" class="">Сессия 8: Экономика военного времени</a></li>
-      </ul>
-    </nav>
+          </ul>
+          <a href="#Registration" class="d-block d-xl-none btn btn-danger rounded-0 text-white mt-4" role="button">Зарегистрироваться</a>
+      </div>
+    </div>
+  </nav>
 </div>
         </div>
 
-        <div class="col-lg-10 ps-lg-5">
+        <div class="col-xl-10 ps-xl-5">
             <div class="conference-image">
-                <div class="my-5 py-5">
-                    <div class="my-5 py-5">
+                <div class="my-xl-5 py-xl-5 pt-5">
+                    <div class="my-xl-5 mt-5 py-5">
                         <div class="fs-3 d-inline">Конференция организована медиа-проектом
-                            <a class="ms-2" href="https://t.me/stranaimir" target="_blank">
+                            <a class="ms-lg-2" href="https://t.me/stranaimir" target="_blank">
                                 <img class="stmologo" src="stmlogo.svg" alt="О стране и мире"/>
                             </a>
                         </div>

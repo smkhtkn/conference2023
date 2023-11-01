@@ -120,7 +120,7 @@ input[type="text"]:focus {
 	border-radius: 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
 	.bd-toc {
 	  position:-webkit-sticky;
 	  position:sticky;
@@ -179,6 +179,7 @@ input[type="text"]:focus {
 		height: 32px;
 	 }
 	@include _600 {
+		margin-top: -10px;
 		height: 26px;
 	 }
 }
@@ -194,4 +195,11 @@ input[type="text"]:focus {
 	@include _480 {
 		width: 100%;
 	 }
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
 }
