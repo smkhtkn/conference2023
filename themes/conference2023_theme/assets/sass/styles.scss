@@ -190,6 +190,9 @@ input[type="text"]:focus {
 
 .registrationform {
 	width: 75%;
+	@include _1400 {
+		width: 85%;
+	 }
 	@include _979 {
 		width: 80%;
 	 }
