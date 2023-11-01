@@ -207,3 +207,15 @@ input[type="text"]:focus {
     outline: none;
     box-shadow: none;
 }
+
+.btn-close:focus,
+.btn-close:active,
+.btn-close:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.own-close {
+    background: url('../close.svg') center no-repeat;
+	background-size: 55%;
+}
