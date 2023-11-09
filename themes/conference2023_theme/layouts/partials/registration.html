@@ -1,5 +1,5 @@
 <div class="py-5 p-lg-5 bg-white rounded-0 border border-3 border-danger shadow-at">
-    <h2 id="Registration" class="display-4 display-5 fw-bold text-center mb-5">Регистрация</h2>
+    <h2 id="Registration" class="display-4 display-5 fw-bold text-center mb-5 ptserif">Регистрация</h2>
     
     <form method="POST" action="https://script.google.com/macros/s/{{with .google}}{{.}}{{end}}/exec" class="mx-5" id="regform">
         <div class="d-lg-flex mb-3">
@@ -11,8 +11,8 @@
         <div class="col-12 col-lg-6 mt-4 mt-lg-0">
             <label for="mail" class="form-label display-9">Ваша электронная почта</label>
             <input name="Email" type="email" class="form-control-lg w-100 rounded-0 atypique" id="mail" aria-describedby="mailHelp" placeholder="name@example.com" required>
-            <div id="mailHelp" class="form-text {{with .online}}{{.}}{{end}}">Мы отправим вам ссылки</div>
-            <div id="mailHelp" class="form-text {{with .inplace}}{{.}}{{end}}">Мы напомним вам о конференции</div>
+            <div id="mailHelp1" class="form-text {{with .online}}{{.}}{{end}}">Мы отправим вам ссылки</div>
+            <div id="mailHelp2" class="form-text {{with .inplace}}{{.}}{{end}}">Мы напомним вам о конференции</div>
         </div>
     </div>
         <div class="mb-3 form-check">
