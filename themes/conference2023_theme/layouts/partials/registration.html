@@ -1,7 +1,7 @@
 <div class="py-5 p-lg-5 bg-white rounded-0 border border-3 border-danger shadow-at">
     <h2 id="Registration" class="display-4 display-5 fw-bold text-center mb-5">Регистрация</h2>
     
-    <form method="POST" action="https://script.google.com/macros/s/AKfycbwiR4mdqijmHdlqoxR1Gde75Jz6siq25bca8fuqp7xbYnG5-wgGu2J6uDPCj6ei3_vo/exec" class="mx-5" id="regform">
+    <form method="POST" action="https://script.google.com/macros/s/{{with .inplaceru}}{{.}}{{end}}/exec" class="mx-5" id="regform">
         <div class="d-lg-flex mb-3">
         <div class="col-12 col-lg-6 pe-lg-3">
             <label for="name" class="form-label display-9">Как к вам обращаться?</label>
@@ -11,7 +11,8 @@
         <div class="col-12 col-lg-6 mt-4 mt-lg-0">
             <label for="mail" class="form-label display-9">Ваша электронная почта</label>
             <input name="Email" type="email" class="form-control-lg w-100 rounded-0 atypique" id="mail" aria-describedby="mailHelp" placeholder="name@example.com" required>
-            <div id="mailHelp" class="form-text">Она нужна нам, чтобы отправить вам ссылку</div>
+            <div id="mailHelp" class="form-text {{with .online}}{{.}}{{end}}">Чтобы мы отправили вам ссылку</div>
+            <div id="mailHelp" class="form-text {{with .inplace}}{{.}}{{end}}">Чтобы мы напомнили вам о конференции</div>
         </div>
     </div>
         <div class="mb-3 form-check">
@@ -19,9 +20,9 @@
             <label class="form-check-label" for="subscription">Хочу получать рассылку медиа-проекта «О стране и мире» с анонсами новых мероприятий</label>
         </div>
 
-        <div class="mb-3 py-4">
+        <div class="mb-3 py-4 {{with .inplace}}{{.}}{{end}}">
 
-            <label for="checkSession1" class="form-label display-9">Выбор сессии</label>
+            <label for="checkSession1" class="form-label display-9">Выбрать сессии</label>
 
             <div class="d-lg-flex">
             <div class="col-12 col-lg-6 pe-lg-3">
@@ -69,8 +70,31 @@
 
         </div>
 
+        <div class="mb-3 py-4 {{with .online}}{{.}}{{end}}">
+
+            <label for="checkDay1" class="form-label display-9">Выбрать дни</label>
+
+            <div class="d-lg-flex">
+            <div class="col-12 col-lg-6 pe-lg-3">
+            <div class="form-check form-switch mb-2">
+                <input name="Day1" class="form-check-input" type="checkbox" role="switch" id="checkDay1" checked>
+                <label class="form-check-label" for="checkDay1">Первый день: 23 ноября</label>
+            </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+            <div class="form-check form-switch mb-2">
+                <input name="Day2" class="form-check-input" type="checkbox" role="switch" id="checkDay2" checked>
+                <label class="form-check-label" for="checkDay2">Второй день: 24 ноября</label>
+            </div>
+            </div>
+            </div>
+
+        </div>
+
         <div class="text-center"><button type="submit" class="btn btn-danger btn-lg rounded-0">Отправить</button></div>
         
     </form>
-    <div id="success-message" class="d-none mx-5 display-8 text-center">Спасибо, вы успешно зарегистрировались! В день мероприятия мы пришлем вам ссылки на выбранные вами сессии. В случае, если письмо не придет, проверьте папку «Спам». При наличии дополнительных вопросов напишите нам: <a href="mailto:info@sakharov.world">info@sakharov.world</a></div>
+    <div id="success-message" class="d-none mx-5 display-8 text-center {{with .online}}{{.}}{{end}}">Спасибо, вы успешно зарегистрировались! В день мероприятия мы пришлем вам ссылки на выбранные вами сессии. В случае, если письмо не придет, проверьте папку «Спам». При наличии дополнительных вопросов напишите нам: <a href="mailto:info@sakharov.world">info@sakharov.world</a></div>
+    <div id="success-message" class="d-none mx-5 display-8 text-center {{with .inplace}}{{.}}{{end}}">Спасибо, вы успешно зарегистрировались! Мы пришлем вам напоминание о конференции за день до ее начала. В случае, если письмо не придет, проверьте папку «Спам». При наличии дополнительных вопросов напишите нам: <a href="mailto:info@sakharov.world">info@sakharov.world</a></div>
 </div>
